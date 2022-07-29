@@ -1,0 +1,179 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.header {
+	position: fixed;
+	background-color: #000;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $main_color;
+		z-index: 2;
+	}
+
+	&__body {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		height: 60px;
+		align-items: center;
+	}
+
+	&__logo {
+		overflow: hidden;
+		display: block;
+		z-index: 5;
+
+		p {
+			color: $header_text;
+			font-family: 'verdanab';
+			@include adaptiv-font(30, 24);
+			font-weight: 700;
+			line-height: 50.07px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		position: relative;
+		z-index: 2;
+
+		li {
+			list-style-type: none;
+			margin: 0px 0px 0px 20px;
+		}
+	}
+
+	&__link {
+		font-family: 'Raleway', sans-serif;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $elements;
+		@include adaptiv-font(16, 14);
+		font-weight: 400;
+		line-height: 36px;
+		color: $header_text;
+		letter-spacing: 0.65px;
+
+		&:hover {
+			border-bottom: 3px solid #d4dfe8;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	body.lock {
+		overflow: hidden;
+	}
+
+	.header {
+		&__body {
+			height: 60px;
+		}
+
+		&__logo {
+			flex: 0 0 100px;
+		}
+
+		&__burger {
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 20px;
+			position: relative;
+			z-index: 4;
+
+			span {
+				position: absolute;
+				background-color: $header_text;
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				top: 9px;
+				transition: all 0.3s ease 0s;
+			}
+
+			&:before,
+			&:after {
+				content: '';
+				background-color: $header_text;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				left: 0;
+				transition: all 0.3s ease 0s;
+			}
+
+			&:before {
+				top: 0;
+			}
+
+			&:after {
+				bottom: 0;
+			}
+
+			&.active span {
+				transform: scale(0);
+			}
+
+			&.active:before {
+				transform: rotate(45deg);
+				top: 9px;
+			}
+
+			&.active:after {
+				transform: rotate(-45deg);
+				bottom: 9px;
+			}
+		}
+
+		&__menu {
+			position: fixed;
+			top: -100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background-color: $main_color;
+			padding: 80px 10px 20px 10px;
+			transition: all 0.3s ease 0s;
+			text-align: center;
+			overflow: auto;
+
+			&.active {
+				top: 0;
+			}
+		}
+
+		&__list {
+			display: block;
+
+			li {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+
+		&__link {
+			font-size: 30px;
+			font-weight: 400;
+			line-height: 50px;
+			color: #3c4357;
+			letter-spacing: 1.5;
+
+			&:hover {
+				border-bottom: 3px solid #d4dfe8;
+			}
+		}
+	}
+}
