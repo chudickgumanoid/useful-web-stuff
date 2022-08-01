@@ -1,0 +1,44 @@
+{
+    "remote.SSH.remotePlatform": {
+        "192.168.0.2": "linux"
+    },
+    "files.autoSave": "afterDelay",
+    "[html-eex]": {
+        "editor.defaultFormatter": "JakeBecker.elixir-ls"
+    },
+    "workbench.startupEditor": "none",
+    "editor.mouseWheelZoom": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.tabSize": 3,
+    "liveSassCompile.settings.showOutputWindowOn": "None",
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/../../css"
+        }
+    ],
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 5 versions"
+    ],
+    "[phoenix-heex]": {
+        "editor.defaultFormatter": "JakeBecker.elixir-ls"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "emmet.includeLanguages": {
+        "phoenix-heex": "html"
+    },
+    "[HTML (EEx)]": {
+        "editor.defaultFormatter": "JakeBecker.elixir-ls"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "settingsSync.ignoredExtensions": [],
+    "liveServer.settings.fullReload": true
+}

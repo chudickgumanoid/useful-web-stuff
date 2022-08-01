@@ -1,0 +1,62 @@
+{
+	"@media1270": {
+		"prefix": [
+			"md1270"
+		],
+		"scope": "scss, css",
+		"body": [
+			"@media (max-width: 1270px) {$0}"
+		],
+		"description": "media for 1270"
+	},
+	"@media1024": {
+		"prefix": [
+			"md1024"
+		],
+		"scope": "scss, css",
+		"body": [
+			"@media (max-width: 1024px) {$0}"
+		],
+		"description": "media for 1024"
+	},
+	"@media768": {
+		"prefix": [
+			"md768"
+		],
+		"scope": "scss, css",
+		"body": [
+			"@media (max-width: 768px) {$0}"
+		],
+		"description": "media for 768"
+	},
+	"@media600": {
+		"prefix": [
+			"md600"
+		],
+		"scope": "scss, css",
+		"body": [
+			"@media (max-width: 600px) {$0}"
+		],
+		"description": "media for 600"
+	},
+	"@media425": {
+		"prefix": [
+			"md425"
+		],
+		"scope": "scss, css",
+		"body": [
+			"@media (max-width: 425px) {$0}"
+		],
+		"description": "media for 425"
+	},
+	"@media320": {
+		"prefix": [
+			"md320"
+		],
+		"scope": "scss, css",
+		"body": [
+			"@media (max-width: 320px) {$0}"
+		],
+		"description": "media for 320"
+	}
+}
