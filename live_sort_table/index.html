@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>табличка</title>
+   <style>
+      .form-control {
+         display: block;
+         width: 100%;
+         padding: 0.375rem 0.75rem;
+         font-size: 1rem;
+         line-height: 1.5;
+         color: #495057;
+         background-color: #fff;
+         background-clip: padding-box;
+         border: 1px solid #ced4da;
+         border-radius: 0.25rem;
+         transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      }
+
+      .table {
+         width: 100%;
+         max-width: 100%;
+         margin-bottom: 1rem;
+         background-color: transparent;
+      }
+
+      .table thead th {
+         vertical-align: bottom;
+         border-bottom: 2px solid #dee2e6;
+      }
+
+      .table-striped tbody tr:nth-of-type(odd) {
+         background-color: rgba(0, 0, 0, .05);
+      }
+
+      .table td,
+      .table th {
+         padding: 0.75rem;
+         vertical-align: top;
+         border-top: 1px solid #dee2e6;
+      }
+   </style>
+</head>
+
+<body>
+   <input class="form-control" type="text" placeholder="Фамилия или телефон" id="search-text" onkeyup="tableSearch()">
+   <table class="table table-striped" id="info-table">
+      <thead>
+         <tr>
+            <th>Фамилия</th>
+            <th>Телефон</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <th>511</th>
+            <th>ваася</th>
+         </tr>
+         <tr>
+            <th>111</th>
+            <th>йцуу</th>
+         </tr>
+         <tr>
+            <th>222</th>
+            <th>ваася</th>
+         </tr>
+         <tr>
+            <th>3333</th>
+            <th>йцуу</th>
+         </tr>
+         <tr>
+            <th>4444</th>
+            <th>ваася</th>
+         </tr>
+         <tr>
+            <th>5555</th>
+            <th>йцуу</th>
+         </tr>
+      </tbody>
+   </table>
+   <script>
+      function tableSearch() {
+         var phrase = document.getElementById('search-text');
+         var table = document.getElementById('info-table');
+         var regPhrase = new RegExp(phrase.value, 'i');
+         var flag = false;
+         for (var i = 1; i < table.rows.length; i++) {
+            flag = false;
+            for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
+               flag = regPhrase.test(table.rows[i].cells[j].innerHTML);
+               if (flag) break;
+            }
+            if (flag) {
+               table.rows[i].style.display = "";
+            } else {
+               table.rows[i].style.display = "none";
+            }
+
+         }
+      }
+
+   </script>
+</body>
+
+</html>
